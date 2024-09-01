@@ -1,0 +1,79 @@
+<DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Bryan Nyarko-Forms</title>
+	 <meta name:"viewport"  content="width=device=width, initial-scale=1.0">
+  </head>
+  
+  <style>
+    body{background-image:url("C:/Users/PC/OneDrive/Desktop/web project nyarko bryan/wall.png");
+	     justify-items:center;
+		 align-items:center;
+		 display:grid;
+		 background-size:cover;}
+	
+	h1{margin-bottom:100px;
+	   text-align:center;
+	   display:grid;
+	   background-color:white;
+	   width:100%;} 
+	
+   #name,#email,#phone{ margin:5px;
+	                    display:grid;}
+   
+	form{background-color:rgba(0,10,50,0.2);
+	     backdrop-filter:blur(4px);
+		 padding-top:5px;
+		 padding-left:5px;
+		 padding-right:5px;
+		 padding-bottom:5px;
+		 border:2px solid black;
+		 border-radius:10px;
+		 color:white;
+		 max-width:500px;}
+
+    #submit{color:black;
+	       background-color:white;
+		   position:right;
+			margin-left:150px;}
+    
+	#submit:hover{background-color:gray;
+	              transition:0.3s;}
+  </style>
+  
+  <body> 
+    <h1>THE HISTORY PEOPLE</h1>
+	
+	<form id="myForm">
+	  <label>Name:<input type="text" id="name"></label><br>
+	
+	   <label for="email">Email:</label>
+	   <input type="email" id="email"  placeholder="mmmm@gmail.com"><br>
+	   
+	   <label for="phone" >Phone number:</label>
+	   <input type="tel" id="phone"><br>
+	   
+	   <input type="button" value="submit" id="submit">
+	  
+	  
+	</form>
+	
+
+    <script>
+    document.getElementById('submit').addEventListener('click', function() {
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+    
+      if (name === '' || phone === '' || email === '') {
+        alert('Please make sure to fill out all fields in the form correctly before proceeding.');
+      } else {
+        window.location.href = 'file:///C:/Users/PC/OneDrive/Desktop/web project nyarko bryan/page1.html';
+      }
+    });
+   </script>
+  </body>
+ 
+</html>
